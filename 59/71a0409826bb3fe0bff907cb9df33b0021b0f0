@@ -1,0 +1,28 @@
+docs/laoyuanxiaozhi-validation.md
+  s_20742fc20a7f1d::t_abad4ce21bca43 18-21,26-28
+  s_20742fc20a7f1d::t_3d5c84dd96eb12 29-53
+main/boards/laoyuanxiaozhi/README.md
+  s_20742fc20a7f1d::t_a8583996c27ee8 41-51
+CMakeLists.txt
+  s_20742fc20a7f1d::t_98f344edb15c6c 12
+main/CMakeLists.txt
+  s_20742fc20a7f1d::t_713c11ef16fcf4 1104-1110
+main/boards/waveshare/esp32-s3-touch-lcd-1.85c/portrait_display.h
+  s_20742fc20a7f1d::t_1fcbb2daac05f8 8-10,35-48,74-77
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "5971a0409826bb3fe0bff907cb9df33b0021b0f0",
+  "prompts": {},
+  "sessions": {
+    "s_20742fc20a7f1d": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a080cf-adf6-7ae0-a959-ae3739aa2054",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "kunpeng2.zhang <kunpeng2.zhang@ly.com>"
+    }
+  }
+}
