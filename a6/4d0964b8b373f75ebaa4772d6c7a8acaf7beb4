@@ -1,0 +1,107 @@
+main/Kconfig.projbuild
+  s_f647742f693ab6::t_f68f14035a4d49 837-843
+  s_f647742f693ab6::t_1a4cbc13bc188d 844-850
+  s_f647742f693ab6::t_7ee624b7e52f67 851
+main/boards/waveshare/esp32-s3-touch-lcd-1.85c/esp32-s3-touch-lcd-1.85c.cc
+  s_f647742f693ab6::t_f68f14035a4d49 10-12,362-364,366
+  s_f647742f693ab6::t_1a4cbc13bc188d 14-18,389-391
+  s_f647742f693ab6::t_39b85fa1dbedb5 13
+generated/package_stickers.py
+  s_f647742f693ab6::t_4d177080cc02f3 1-56
+main/boards/waveshare/esp32-s3-touch-lcd-1.85c/config.json
+  s_f647742f693ab6::t_1a4cbc13bc188d 11-12,22-26
+  s_f647742f693ab6::t_f68f14035a4d49 13-21
+  s_f647742f693ab6::t_31d9a627a0ec15 8-10,29
+main/boards/waveshare/esp32-s3-touch-lcd-1.85c/music_tools.h
+  s_f647742f693ab6::t_1a4cbc13bc188d 1-53
+scripts/tests/test_build_default_assets.py
+  s_f647742f693ab6::t_f68f14035a4d49 17-23
+  s_f647742f693ab6::t_a6a606d08281ac 24
+scripts/verify_portrait_assets.py
+  s_f647742f693ab6::t_549f3d2e0a1609 1-58
+main/CMakeLists.txt
+  s_f647742f693ab6::t_f68f14035a4d49 399-401,1247-1251,1253
+main/boards/waveshare/esp32-s3-touch-lcd-1.85c/portrait_display.h
+  s_f647742f693ab6::t_09621b6ea37611 64-66,76,78,83,88
+  s_f647742f693ab6::t_f68f14035a4d49 1-63,67-75,77,81-82,84-85,87,89-101
+  s_f647742f693ab6::t_01c9acdffdb947 79-80
+  s_f647742f693ab6::t_2e1fc487438f7a 86
+main/boards/waveshare/esp32-s3-touch-lcd-1.85c/assets/portrait-manifest.json
+  s_f647742f693ab6::t_2e96175842e845 1-147,149-158,160-169,171-180,182-191,193-202,204-239
+  s_f647742f693ab6::t_ffef240fc7a8a2 148,159,170,181,192,203
+prompts/anime-big-head-stickers.txt
+  s_f647742f693ab6::t_9cf720a8440908 1-18
+main/application.cc
+  s_f647742f693ab6::t_1a4cbc13bc188d 283-284,623-624,1128-1164
+  s_f647742f693ab6::t_0369dbe6867f7c 1165-1166
+deploy/music-mcp/trace_artist_search.py
+  s_f647742f693ab6::t_603415e7048f0b 1-45
+scripts/build_default_assets.py
+  s_f647742f693ab6::t_f68f14035a4d49 714-718
+  s_f647742f693ab6::t_991ad815ceeefd 713
+idf-local.cmd
+  s_f647742f693ab6::t_31d9a627a0ec15 1-12
+deploy/music-mcp/verify_service.py
+  s_f647742f693ab6::t_fe030ed23ac540 1-4,7-10,12-15,25-29,31-39,42-54
+  s_f647742f693ab6::t_f15b42f8858232 5-6,11,16-24
+  s_f647742f693ab6::t_949e7ae2d480d8 30,41
+  s_f647742f693ab6::t_6587d1218d5c4c 40
+main/boards/waveshare/esp32-s3-touch-lcd-1.85c/README.md
+  s_f647742f693ab6::t_e3f3012d1794fe 9-27
+  s_f647742f693ab6::t_50d150a00197d0 146-148
+  s_f647742f693ab6::t_60e15edffb7c9f 107-133
+  s_f647742f693ab6::t_d317d7dc3a1b9e 134-136,138-140,143-145,154
+  s_f647742f693ab6::t_ec324ec1060370 137,141-142,149-153
+  s_f647742f693ab6::t_725042d96ec22f 3-8,28-83,88,155-159
+  s_f647742f693ab6::t_c2056af2d021c8 84-87
+  s_f647742f693ab6::t_1969b9220200b8 89-106
+deploy/music-mcp/.env.example
+  s_f647742f693ab6::t_fe030ed23ac540 1-3
+deploy/music-mcp/README.md
+  s_f647742f693ab6::t_e3f3012d1794fe 1-57,59-63
+  s_f647742f693ab6::t_60c50adc97c871 58,76-96
+  s_f647742f693ab6::t_1a39834da7d80e 64-75
+main/application.h
+  s_f647742f693ab6::t_4abb096ecc3fce 121-123,147-148,177
+.gitignore
+  s_20742fc20a7f1d::t_0d91797e0290a2 21-26
+prompts/portrait-firmware-c.txt
+  s_f647742f693ab6::t_ddcb8af48b28fb 1-8
+prompts/portrait-firmware-a.txt
+  s_f647742f693ab6::t_ddcb8af48b28fb 1-14
+scripts/build-box-v2-portrait.cmd
+  s_f647742f693ab6::t_f68f14035a4d49 1-12
+scripts/monitor-com.ps1
+  s_f647742f693ab6::t_c2056af2d021c8 1-57
+deploy/music-mcp/diagnose_search.py
+  s_f647742f693ab6::t_34e7c4e76f0f9a 1-77
+prompts/portrait-firmware-b.txt
+  s_f647742f693ab6::t_ddcb8af48b28fb 1-14
+scripts/prepare_portrait_assets.py
+  s_f647742f693ab6::t_377ae2f51eec37 33-36,39-40
+  s_f647742f693ab6::t_01c9acdffdb947 1-32,37-38,41-99
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "a64d0964b8b373f75ebaa4772d6c7a8acaf7beb4",
+  "prompts": {},
+  "sessions": {
+    "s_20742fc20a7f1d": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a080cf-adf6-7ae0-a959-ae3739aa2054",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "kunpeng2.zhang <kunpeng2.zhang@ly.com>"
+    },
+    "s_f647742f693ab6": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a079af-a10b-7d53-8da3-51cf2265e521",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "kunpeng2.zhang <kunpeng2.zhang@ly.com>"
+    }
+  }
+}
