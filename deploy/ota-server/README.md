@@ -43,8 +43,9 @@ python3 scripts/verify_private_ota.py --version 2.4.2
 
 Publisher tests require Linux (`fcntl.flock`). Release 2.4.2 was published to
 laoyuanxiaozhi/test on 2026-09-08. HTTPS downloads matched the manifest and local
-application/assets SHA-256 values. USB migration and physical OTA acceptance
-remain pending; see docs/laoyuanxiaozhi-validation.md.
+application/assets SHA-256 values. COM11 subsequently completed USB migration and application/assets OTA to 2.4.3
+(test channel), booted ota_1, marked the image valid, and reconnected to MQTT/idle.
+Visual/audio acceptance remains separate; see docs/laoyuanxiaozhi-validation.md.
 
 The existing server certificate lacks an Authority Key Identifier and Python 3.13
 strict X.509 defaults reject it. The HTTPS health check passed using Ubuntu curl with the supplied CA and
@@ -52,3 +53,9 @@ chain/hostname verification enabled. Ubuntu Python also verified both release
 downloads with the supplied CA. Do not use
 an unverified SSL context. A future certificate renewal should include AKI/SKI
 for compatibility with newer strict clients.
+
+The current publisher assigns the requested release number to both firmware and
+assets even when asset bytes are unchanged. Consequently 2.4.3 caused a second,
+unnecessary assets download after application OTA. The device completed both;
+this was not an application retry. Avoid claiming that this publisher automatically
+reuses unchanged assets versions.
