@@ -41,11 +41,14 @@ python -m unittest discover -s scripts/tests -v
 python3 scripts/verify_private_ota.py --version 2.4.2
 ```
 
-Publisher tests require Linux (`fcntl.flock`). No laoyuanxiaozhi release or
-physical OTA success is implied by these source files.
+Publisher tests require Linux (`fcntl.flock`). Release 2.4.2 was published to
+laoyuanxiaozhi/test on 2026-09-08. HTTPS downloads matched the manifest and local
+application/assets SHA-256 values. USB migration and physical OTA acceptance
+remain pending; see docs/laoyuanxiaozhi-validation.md.
 
 The existing server certificate lacks an Authority Key Identifier and Python 3.13
 strict X.509 defaults reject it. The HTTPS health check passed using Ubuntu curl with the supplied CA and
-chain/hostname verification enabled. Download verification awaits publication. Do not use
+chain/hostname verification enabled. Ubuntu Python also verified both release
+downloads with the supplied CA. Do not use
 an unverified SSL context. A future certificate renewal should include AKI/SKI
 for compatibility with newer strict clients.
