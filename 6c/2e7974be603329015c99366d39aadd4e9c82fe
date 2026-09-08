@@ -1,0 +1,21 @@
+deploy/ota-server/README.md
+  s_20742fc20a7f1d::t_33ab1fb6fa3655 46-48,56-61
+docs/laoyuanxiaozhi-validation.md
+  s_20742fc20a7f1d::t_1b85358863b5d2 36-43,60-61
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "6c2e7974be603329015c99366d39aadd4e9c82fe",
+  "prompts": {},
+  "sessions": {
+    "s_20742fc20a7f1d": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a080cf-adf6-7ae0-a959-ae3739aa2054",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "kunpeng2.zhang <kunpeng2.zhang@ly.com>"
+    }
+  }
+}
