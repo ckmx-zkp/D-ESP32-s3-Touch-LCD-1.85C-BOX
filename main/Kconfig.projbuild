@@ -6,6 +6,15 @@ config OTA_URL
     help
         The application will access this URL to check for new firmwares and server address.
 
+config PRIVATE_OTA_URL
+    string "Private firmware and assets OTA manifest URL"
+    default ""
+    help
+        Optional private OTA endpoint used only for application firmware and
+        assets updates. Activation and transport configuration continue to use
+        OTA_URL. The endpoint must accept the same device information POST and
+        return firmware and/or assets objects.
+
 choice
     prompt "Flash Assets"
     default FLASH_DEFAULT_ASSETS if !USE_EMOTE_MESSAGE_STYLE
@@ -272,6 +281,9 @@ choice BOARD_TYPE
         depends on IDF_TARGET_ESP32S3
     config BOARD_TYPE_LABPLUS_MPYTHON_V3
         bool "Labplus mPython V3"
+        depends on IDF_TARGET_ESP32S3
+    config BOARD_TYPE_LAOYUANXIAOZHI
+        bool "Laoyuanxiaozhi BOX V2 (private OTA)"
         depends on IDF_TARGET_ESP32S3
     config BOARD_TYPE_LCDWIKI_ES3C35P
         bool "LCDWiki ES3C35P 3.5-inch ESP32-S3"
@@ -822,7 +834,7 @@ choice DISPLAY_ESP32S3_AUDIO_BOARD
 endchoice
 
 choice DISPLAY_ESP32S3_TOUCH_LCD_1_85C
-    depends on BOARD_TYPE_WAVESHARE_ESP32_S3_TOUCH_LCD_1_85C
+    depends on (BOARD_TYPE_WAVESHARE_ESP32_S3_TOUCH_LCD_1_85C || BOARD_TYPE_LAOYUANXIAOZHI)
     prompt "ESP32S3_TOUCH_LCD_1_85C version"
     default VERSION_2_0
     help
@@ -836,14 +848,14 @@ endchoice
 
 config BOX_V2_PORTRAIT_EMOJI
     bool "Use full-screen portrait emoji on BOX V2"
-    depends on BOARD_TYPE_WAVESHARE_ESP32_S3_TOUCH_LCD_1_85C && VERSION_2_0 && USE_DEFAULT_MESSAGE_STYLE
+    depends on (BOARD_TYPE_WAVESHARE_ESP32_S3_TOUCH_LCD_1_85C || BOARD_TYPE_LAOYUANXIAOZHI) && VERSION_2_0 && USE_DEFAULT_MESSAGE_STYLE
     default n
     help
         Load the board-local 360x360 portrait collection and round-screen layout.
 
 config PRIVATE_NETEASE_MUSIC
     bool "Enable private NetEase music MCP tools"
-    depends on BOARD_TYPE_WAVESHARE_ESP32_S3_TOUCH_LCD_1_85C && VERSION_2_0
+    depends on (BOARD_TYPE_WAVESHARE_ESP32_S3_TOUCH_LCD_1_85C || BOARD_TYPE_LAOYUANXIAOZHI) && VERSION_2_0
     default n
     help
         Register URL playback and stop tools for the BOX V2 music variant.

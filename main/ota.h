@@ -7,6 +7,8 @@
 #include <esp_err.h>
 #include "board.h"
 
+struct cJSON;
+
 class Ota {
 public:
     Ota();
@@ -16,17 +18,21 @@ public:
     esp_err_t Activate();
     bool HasActivationChallenge() { return has_activation_challenge_; }
     bool HasNewVersion() { return has_new_version_; }
+    bool HasNewAssets() { return has_new_assets_; }
     bool HasMqttConfig() { return has_mqtt_config_; }
     bool HasWebsocketConfig() { return has_websocket_config_; }
     bool HasActivationCode() { return has_activation_code_; }
     bool HasServerTime() { return has_server_time_; }
     bool StartUpgrade(std::function<void(int progress, size_t speed)> callback);
-    static bool Upgrade(const std::string& firmware_url, std::function<void(int progress, size_t speed)> callback);
+    static bool Upgrade(const std::string& firmware_url,
+                        std::function<void(int progress, size_t speed)> callback);
     void MarkCurrentVersionValid();
 
     const std::string& GetFirmwareVersion() const { return firmware_version_; }
     const std::string& GetCurrentVersion() const { return current_version_; }
     const std::string& GetFirmwareUrl() const { return firmware_url_; }
+    const std::string& GetAssetsVersion() const { return assets_version_; }
+    const std::string& GetAssetsUrl() const { return assets_url_; }
     const std::string& GetActivationMessage() const { return activation_message_; }
     const std::string& GetActivationCode() const { return activation_code_; }
     std::string GetCheckVersionUrl();
@@ -35,6 +41,7 @@ private:
     std::string activation_message_;
     std::string activation_code_;
     bool has_new_version_ = false;
+    bool has_new_assets_ = false;
     bool has_mqtt_config_ = false;
     bool has_websocket_config_ = false;
     bool has_server_time_ = false;
@@ -44,6 +51,8 @@ private:
     std::string current_version_;
     std::string firmware_version_;
     std::string firmware_url_;
+    std::string assets_version_;
+    std::string assets_url_;
     std::string activation_challenge_;
     std::string serial_number_;
     int activation_timeout_ms_ = 30000;
@@ -51,8 +60,11 @@ private:
     std::function<void(int progress, size_t speed)> upgrade_callback_;
     std::vector<int> ParseVersion(const std::string& version);
     bool IsNewVersionAvailable(const std::string& currentVersion, const std::string& newVersion);
+    esp_err_t CheckPrivateVersion(const std::string& url);
+    void ParseFirmware(cJSON* root);
+    void ParseAssets(cJSON* root);
     std::string GetActivationPayload();
     std::unique_ptr<Http> SetupHttp();
 };
 
-#endif // _OTA_H
+#endif  // _OTA_H

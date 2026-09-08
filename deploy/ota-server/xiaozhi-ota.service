@@ -1,0 +1,21 @@
+[Unit]
+Description=XiaoZhi private OTA manifest service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=xiaozhi-ota
+Group=xiaozhi-ota
+EnvironmentFile=-/etc/sysconfig/xiaozhi-ota
+ExecStart=/usr/bin/python3.6 /opt/xiaozhi-ota/app/ota_server.py
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadOnlyPaths=/opt/xiaozhi-ota
+
+[Install]
+WantedBy=multi-user.target

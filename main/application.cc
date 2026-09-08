@@ -391,8 +391,6 @@ void Application::CheckAssetsVersion() {
     std::string download_url = settings.GetString("download_url");
 
     if (!download_url.empty()) {
-        settings.EraseKey("download_url");
-
         char message[256];
         snprintf(message, sizeof(message), Lang::Strings::FOUND_NEW_ASSETS, download_url.c_str());
         Alert(Lang::Strings::LOADING_ASSETS, message, "cloud_download", Lang::Sounds::OGG_UPGRADE);
@@ -421,6 +419,13 @@ void Application::CheckAssetsVersion() {
             vTaskDelay(pdMS_TO_TICKS(2000));
             SetDeviceState(kDeviceStateActivating);
             return;
+        }
+        settings.EraseKey("download_url");
+        std::string pending_version = settings.GetString("pending_version");
+        if (!pending_version.empty()) {
+            settings.SetString("version", pending_version);
+            settings.EraseKey("pending_version");
+            ESP_LOGI(TAG, "Assets updated to version %s", pending_version.c_str());
         }
     }
 
@@ -481,6 +486,19 @@ void Application::CheckNewVersion() {
         retry_count = 0;
         retry_delay = 10;  // Reset retry delay
 
+        bool assets_update_pending = false;
+        if (!ota_->HasNewVersion() && ota_->HasNewAssets() &&
+            Assets::GetInstance().partition_valid()) {
+            Settings settings("assets", true);
+            // Retry failed downloads on natural boots without a reboot loop.
+            bool already_pending = settings.GetString("download_url") == ota_->GetAssetsUrl();
+            settings.SetString("download_url", ota_->GetAssetsUrl());
+            settings.SetString("pending_version", ota_->GetAssetsVersion());
+            assets_update_pending = !already_pending;
+            ESP_LOGI(TAG, "Assets update %s scheduled for next boot",
+                     ota_->GetAssetsVersion().c_str());
+        }
+
         if (ota_->HasNewVersion()) {
             if (UpgradeFirmware(ota_->GetFirmwareUrl(), ota_->GetFirmwareVersion())) {
                 return;  // This line will never be reached after reboot
@@ -490,6 +508,11 @@ void Application::CheckNewVersion() {
 
         // No new version, mark the current version as valid
         ota_->MarkCurrentVersionValid();
+        if (assets_update_pending) {
+            ESP_LOGI(TAG, "Rebooting to install the scheduled assets update");
+            Reboot();
+            return;
+        }
         if (!ota_->HasActivationCode() && !ota_->HasActivationChallenge()) {
             // Exit the loop if done checking new version
             break;

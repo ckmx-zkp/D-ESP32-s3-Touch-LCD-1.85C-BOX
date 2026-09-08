@@ -1,0 +1,20 @@
+{
+    "type": "laoyuanxiaozhi",
+    "target": "esp32s3",
+    "builds": [
+        {
+            "name": "laoyuanxiaozhi",
+            "sdkconfig_append": [
+                "CONFIG_BOARD_TYPE_LAOYUANXIAOZHI=y",
+                "CONFIG_VERSION_2_0=y",
+                "CONFIG_PRIVATE_NETEASE_MUSIC=y",
+                "CONFIG_USE_DEFAULT_MESSAGE_STYLE=y",
+                "CONFIG_BOX_V2_PORTRAIT_EMOJI=y",
+                "CONFIG_OTA_URL=\"https://api.tenclass.net/xiaozhi/ota/\"",
+                "CONFIG_PRIVATE_OTA_URL=\"https://47.108.114.17:9443/xiaozhi-ota/api/v1/check?channel=test\"",
+                "CONFIG_MBEDTLS_CUSTOM_CERTIFICATE_BUNDLE=y",
+                "CONFIG_MBEDTLS_CUSTOM_CERTIFICATE_BUNDLE_PATH=\"deploy/ota-server/ota-root-ca.pem\""
+            ]
+        }
+    ]
+}
