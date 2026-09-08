@@ -5,7 +5,25 @@
     "builds": [
         {
             "name": "esp32-s3-touch-lcd-1.85c",
-            "sdkconfig_append": []
+            "sdkconfig_append": [
+                "CONFIG_VERSION_2_0=y"
+            ]
+        },
+        {
+            "name": "esp32-s3-touch-lcd-1.85c-box-v2-music-portrait",
+            "sdkconfig_append": [
+                "CONFIG_VERSION_2_0=y",
+                "CONFIG_PRIVATE_NETEASE_MUSIC=y",
+                "CONFIG_USE_DEFAULT_MESSAGE_STYLE=y",
+                "CONFIG_BOX_V2_PORTRAIT_EMOJI=y"
+            ]
+        },
+        {
+            "name": "esp32-s3-touch-lcd-1.85c-box-v2-music",
+            "sdkconfig_append": [
+                "CONFIG_VERSION_2_0=y",
+                "CONFIG_PRIVATE_NETEASE_MUSIC=y"
+            ]
         }
     ]
 }

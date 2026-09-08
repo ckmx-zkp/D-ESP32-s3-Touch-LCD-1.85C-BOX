@@ -7,6 +7,15 @@
 #include "button.h"
 #include "config.h"
 
+#ifdef CONFIG_BOX_V2_PORTRAIT_EMOJI
+#include "portrait_display.h"
+#endif
+
+#ifdef CONFIG_PRIVATE_NETEASE_MUSIC
+#include "mcp_server.h"
+#include "music_tools.h"
+#endif
+
 #include <esp_log.h>
 #include "i2c_device.h"
 #include <driver/i2c_master.h>
@@ -350,7 +359,11 @@ private:
         esp_lcd_panel_swap_xy(panel, DISPLAY_SWAP_XY);
         esp_lcd_panel_mirror(panel, DISPLAY_MIRROR_X, DISPLAY_MIRROR_Y);
 
+#ifdef CONFIG_BOX_V2_PORTRAIT_EMOJI
+        display_ = new PortraitLcdDisplay(panel_io, panel,
+#else
         display_ = new SpiLcdDisplay(panel_io, panel,
+#endif
                                     DISPLAY_WIDTH, DISPLAY_HEIGHT, DISPLAY_OFFSET_X, DISPLAY_OFFSET_Y, DISPLAY_MIRROR_X, DISPLAY_MIRROR_Y, DISPLAY_SWAP_XY);
     }
 
@@ -373,6 +386,9 @@ public:
         InitializeSpi();
         Initializest77916Display();
         InitializeButtons();
+#ifdef CONFIG_PRIVATE_NETEASE_MUSIC
+        RegisterPrivateMusicTools(McpServer::GetInstance());
+#endif
         GetBacklight()->RestoreBrightness();
     }
 

@@ -280,6 +280,8 @@ void Application::Run() {
                 // SystemInfo::PrintTaskCpuUsage(pdMS_TO_TICKS(1000));
             }
         }
+        // Retry after playback drains or a cancelled HTTP worker has exited.
+        StartPendingNotification();
     }
 }
 
@@ -618,7 +620,8 @@ void Application::InitializeProtocol() {
             } else if (strcmp(state->valuestring, "stop") == 0) {
                 Schedule([this]() {
                     if (GetDeviceState() == kDeviceStateSpeaking) {
-                        if (listening_mode_ == kListeningModeManualStop) {
+                        if (!pending_notification_url_.empty() ||
+                            listening_mode_ == kListeningModeManualStop) {
                             SetDeviceState(kDeviceStateIdle);
                         } else {
                             SetDeviceState(kDeviceStateListening);
@@ -1120,6 +1123,45 @@ void Application::StartNotification(std::string audio_url, std::vector<NotifySub
         ESP_LOGE(TAG, "Failed to start notification playback");
         StopNotification();
     }
+}
+
+void Application::QueueNotification(std::string audio_url, std::vector<NotifySubtitle> subtitles) {
+    Schedule([this, audio_url = std::move(audio_url), subtitles = std::move(subtitles)]() mutable {
+        pending_notification_url_ = std::move(audio_url);
+        pending_notification_subtitles_ = std::move(subtitles);
+        if (GetDeviceState() == kDeviceStateNotifying) {
+            StopNotification();
+        } else if (GetDeviceState() == kDeviceStateListening &&
+                   listening_mode_ != kListeningModeManualStop) {
+            if (protocol_) {
+                protocol_->SendStopListening();
+            }
+            SetDeviceState(kDeviceStateIdle);
+        }
+    });
+}
+
+void Application::CancelNotificationPlayback() {
+    Schedule([this]() {
+        pending_notification_url_.clear();
+        pending_notification_subtitles_.clear();
+        if (GetDeviceState() == kDeviceStateNotifying) {
+            StopNotification();
+        }
+    });
+}
+
+void Application::StartPendingNotification() {
+    if (pending_notification_url_.empty() || GetDeviceState() != kDeviceStateIdle ||
+        notify_player_.IsBusy() || !audio_service_.IsPlaybackIdle()) {
+        return;
+    }
+    auto audio_url = std::move(pending_notification_url_);
+    auto subtitles = std::move(pending_notification_subtitles_);
+    pending_notification_url_.clear();
+    pending_notification_subtitles_.clear();
+    ESP_LOGI(TAG, "Starting queued music playback");
+    StartNotification(std::move(audio_url), std::move(subtitles));
 }
 
 void Application::StopNotification() {

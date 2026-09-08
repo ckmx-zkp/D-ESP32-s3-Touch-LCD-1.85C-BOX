@@ -1,0 +1,18 @@
+Create a polished square 3-by-3 anime chibi big-head reaction sticker sheet based on the MAN in the supplied reference photograph. The reference photograph is visual reference only. Preserve his recognizable identity: adult East Asian man, broad high forehead, very short black hair with a distinctly receding hairline, thin silver rectangular eyeglasses, round gently full face, small relaxed eyes, friendly facial proportions, clean-shaven, and light gray Mandarin-collar shirt. Keep the same recognizable man in all nine stickers; do not turn him into a generic youthful anime boy or add a full fringe.
+
+Art direction: charming expressive hand-drawn anime messaging stickers, huge head occupying about 80 percent of each character, tiny upper torso and small expressive hands, crisp confident dark outlines, refined cel shading, subtle warm blush, appealing exaggerated facial acting. Faithful distinguishing features translated into cute stylization. Crisp production quality with balanced color accents. No photorealism, no 3D rendering.
+
+Exactly nine separate stickers, equally sized, centered in nine equal square cells on a perfectly regular 3 by 3 grid. Plain pure white background, no visible grid lines, no panels or decorative framing. Generous clean white gutters along the exact one-third and two-thirds boundaries for independent cropping. Each entire sticker including hands and small accent marks must fit comfortably inside its own cell, with at least 8 percent clear padding on every side. No sticker overlaps another. No captions, letters, numbers, logo, signature, watermark, or checkerboard.
+
+Read left to right, top to bottom:
+1. Happy greeting: warm closed-mouth smile, one tiny hand waving, bright friendly eyes.
+2. Laughing hard: eyes squeezed shut behind his glasses, wide open laughing mouth, one tiny hand near his cheek, small cheerful accent strokes.
+3. Astonished: eyebrows raised, round open mouth, widened eyes, hands near cheeks, two small yellow surprise accents.
+4. Comically angry: puffed cheeks, furrowed eyebrows, tiny clenched fists, small red anger accent; playful not aggressive.
+5. Feeling wronged and tearful: quivering mouth, large glistening eyes, two exaggerated blue tear streams.
+6. Bashful: pink blushing cheeks, shy small smile, one hand scratching the back of his head, small pink heart.
+7. Thinking: one eyebrow raised, hand under chin, thoughtful sideways glance, subtle small thought dots drawn as circles without text.
+8. Approval: confident friendly grin, tiny hand giving a clear anatomically correct thumbs-up, a couple of small yellow sparkles.
+9. Sleepy: drooping closed eyes, gentle yawn covered by a tiny hand, softly tilted head, a small blue sleep bubble, no text.
+
+Only depict the man as head-and-shoulders stickers. Omit the camel, backpack, landscape, other people, and all photographic background. Deliver one complete square image at 2048 by 2048 pixels.

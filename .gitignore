@@ -18,3 +18,9 @@ main/mmap_generate_emoji.h
 *.bin
 mmap_generate_*.h
 .clangd
+
+logs/
+*.log
+generated/*.meta.json
+generated/*.zip
+__pycache__/

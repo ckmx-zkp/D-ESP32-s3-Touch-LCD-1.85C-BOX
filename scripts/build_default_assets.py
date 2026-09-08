@@ -710,6 +710,12 @@ def get_emoji_collection_path(default_emoji_collection, noto_fonts_path, project
     """
     if not default_emoji_collection:
         return None
+
+    # Board-owned collections can live outside the downloaded font component.
+    if os.path.isabs(default_emoji_collection):
+        if not os.path.isdir(default_emoji_collection):
+            raise ValueError(f"Emoji collection directory not found: {default_emoji_collection}")
+        return default_emoji_collection
     
     # Special handling for otto-gif collection
     if default_emoji_collection == 'otto-gif':

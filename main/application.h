@@ -118,7 +118,9 @@ public:
     AecMode GetAecMode() const { return aec_mode_; }
     void PlaySound(const std::string_view& sound);
     AudioService& GetAudioService() { return audio_service_; }
-    
+    void QueueNotification(std::string audio_url, std::vector<NotifySubtitle> subtitles = {});
+    void CancelNotificationPlayback();
+
     /**
      * Reset protocol resources (thread-safe)
      * Can be called from any task to release resources allocated after network connected
@@ -142,6 +144,8 @@ private:
     AudioService audio_service_;
     NotifyPlayer notify_player_;
     uint32_t notification_playback_id_ = 0;
+    std::string pending_notification_url_;
+    std::vector<NotifySubtitle> pending_notification_subtitles_;
     std::unique_ptr<Ota> ota_;
 
     std::function<void(const std::string&)> mcp_broadcast_callback_;
@@ -170,6 +174,7 @@ private:
     void StartListeningAudio();
     void ConfigureWakeWordForListening();
     void StartNotification(std::string audio_url, std::vector<NotifySubtitle> subtitles);
+    void StartPendingNotification();
     void StopNotification();
     void HandleNotificationFinished(uint32_t playback_id, bool success);
 

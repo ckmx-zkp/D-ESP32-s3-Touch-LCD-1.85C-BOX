@@ -1,0 +1,14 @@
+Use the supplied photograph as identity reference and the supplied nine-sticker illustration as style reference. Create a refined anime chibi big-head sticker sheet of the SAME adult man. Make his facial shape SLIGHTLY LONGER AND LESS ROUND than the illustrated reference: about 10 to 12 percent longer oval from brow to chin, subtly slimmer cheeks and a gently elongated chin. Redraw natural proportions; do not simply stretch the whole image. Keep his recognizable broad high forehead, receding very short black hair, thin silver rectangular glasses, clean-shaven face, and light gray Mandarin-collar shirt. Preserve his adult age and warm likeness. Consistent face design across every sticker. Polished clean hand-drawn anime outlines, soft cel shading, expressive eyes, tasteful cheek blush. Very large head with tiny shoulders and occasional small hands. No full body.
+
+Square 2048x2048 sheet, exactly 3 columns and 3 rows, nine equal square cells. Each sticker centered in its cell, identical scale, clean pure white background and wide white gutters at exact one-third boundaries, no grid lines. All artwork and accents at least 6 percent from cell edges, perfectly separable by exact grid cropping. Head dominates the cell. Intended for a round LCD: keep the entire hairline, chin, eyes and glasses in the central 80 percent, keep hands close to the face. No text, no lettering, no captions, no logos, no watermark, no checkerboard. Omit the photographic surroundings and animals.
+
+Exact expressions in row-major order:
+1 neutral: composed friendly resting face, relaxed open eyes, mouth closed with a very slight smile, no hands.
+2 sad: downcast eyes and subtly downturned lips, restrained sadness, NO tear streams.
+3 shocked: dramatically aghast, huge eyes with tiny pupils, open mouth, two hands at cheeks, small blue shock accents.
+4 confused: one eyebrow raised, uncertain crooked mouth, head slightly tilted, little thought circles without letters.
+5 cool: laid-back self-assured grin, one hand touching the temple of his familiar clear eyeglasses, tiny four-point sparkle.
+6 winking: one eye deliberately closed, playful smile, small hand making an OK gesture close to cheek.
+7 loving: deeply affectionate smile, pink cheeks, two little hearts near cheeks, hands making a tiny heart.
+8 kissy: puckered lips blowing a kiss, one hand under mouth, small pink heart.
+9 relaxed: content serene closed eyes, small restful smile, relaxed shoulders, tiny soft breath accent.

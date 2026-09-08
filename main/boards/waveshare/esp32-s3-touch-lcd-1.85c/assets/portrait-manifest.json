@@ -1,0 +1,239 @@
+{
+  "dimensions": [
+    360,
+    360
+  ],
+  "expressions": [
+    {
+      "name": "happy",
+      "file": "main\\boards\\waveshare\\esp32-s3-touch-lcd-1.85c\\assets\\emoji\\happy.png",
+      "source": "portrait-firmware-a-20260907-123300-2048x2048.png",
+      "source_cell": 0,
+      "dimensions": [
+        360,
+        360
+      ],
+      "sha256": "be10c012b9f07f636639a43bfcec1491d8e5e5f14d12eb6b7c3427e805d2fdbf"
+    },
+    {
+      "name": "laughing",
+      "file": "main\\boards\\waveshare\\esp32-s3-touch-lcd-1.85c\\assets\\emoji\\laughing.png",
+      "source": "portrait-firmware-a-20260907-123300-2048x2048.png",
+      "source_cell": 1,
+      "dimensions": [
+        360,
+        360
+      ],
+      "sha256": "38686d3d5b74144823679b0fdca3e70c64cc1580876937ae8b8e93e8b952f5b1"
+    },
+    {
+      "name": "surprised",
+      "file": "main\\boards\\waveshare\\esp32-s3-touch-lcd-1.85c\\assets\\emoji\\surprised.png",
+      "source": "portrait-firmware-a-20260907-123300-2048x2048.png",
+      "source_cell": 2,
+      "dimensions": [
+        360,
+        360
+      ],
+      "sha256": "314011852ebd5a7163641c42872bf76391c5ff7e212b82f03097547233579a40"
+    },
+    {
+      "name": "angry",
+      "file": "main\\boards\\waveshare\\esp32-s3-touch-lcd-1.85c\\assets\\emoji\\angry.png",
+      "source": "portrait-firmware-a-20260907-123300-2048x2048.png",
+      "source_cell": 3,
+      "dimensions": [
+        360,
+        360
+      ],
+      "sha256": "543881a6ff4eb252caf07f9496b62dccd1916af32442b1699fbd5d1a08f1013d"
+    },
+    {
+      "name": "crying",
+      "file": "main\\boards\\waveshare\\esp32-s3-touch-lcd-1.85c\\assets\\emoji\\crying.png",
+      "source": "portrait-firmware-a-20260907-123300-2048x2048.png",
+      "source_cell": 4,
+      "dimensions": [
+        360,
+        360
+      ],
+      "sha256": "5bd79872c97a1a02543648fd302fcd8cb842e62f11b62e0d08165edb2f271690"
+    },
+    {
+      "name": "embarrassed",
+      "file": "main\\boards\\waveshare\\esp32-s3-touch-lcd-1.85c\\assets\\emoji\\embarrassed.png",
+      "source": "portrait-firmware-a-20260907-123300-2048x2048.png",
+      "source_cell": 5,
+      "dimensions": [
+        360,
+        360
+      ],
+      "sha256": "36916739170866ef317cae09a818cf9f01bdb7d785b3829d75cc4e52bb8036a1"
+    },
+    {
+      "name": "thinking",
+      "file": "main\\boards\\waveshare\\esp32-s3-touch-lcd-1.85c\\assets\\emoji\\thinking.png",
+      "source": "portrait-firmware-a-20260907-123300-2048x2048.png",
+      "source_cell": 6,
+      "dimensions": [
+        360,
+        360
+      ],
+      "sha256": "57e51c4e523aaf1dd94afa8e7c9461dc50107aafbe13a4f7b3bad7b362a4ac59"
+    },
+    {
+      "name": "confident",
+      "file": "main\\boards\\waveshare\\esp32-s3-touch-lcd-1.85c\\assets\\emoji\\confident.png",
+      "source": "portrait-firmware-a-20260907-123300-2048x2048.png",
+      "source_cell": 7,
+      "dimensions": [
+        360,
+        360
+      ],
+      "sha256": "7c460aa9113ec031cdd15e1f2e3e908ca1e34d45df5ba967ccb35d5a34506bf9"
+    },
+    {
+      "name": "sleepy",
+      "file": "main\\boards\\waveshare\\esp32-s3-touch-lcd-1.85c\\assets\\emoji\\sleepy.png",
+      "source": "portrait-firmware-a-20260907-123300-2048x2048.png",
+      "source_cell": 8,
+      "dimensions": [
+        360,
+        360
+      ],
+      "sha256": "007f8cede603d989fdb6c3b7da41bd64477bb8e9b3b4fa84009e3705a4fb4342"
+    },
+    {
+      "name": "neutral",
+      "file": "main\\boards\\waveshare\\esp32-s3-touch-lcd-1.85c\\assets\\emoji\\neutral.png",
+      "source": "portrait-firmware-b-20260907-123300-2048x2048.png",
+      "source_cell": 0,
+      "dimensions": [
+        360,
+        360
+      ],
+      "sha256": "4154c6127e3e211d57f0dc19ebbe64416ba1d4e47e71669ffd86641bc59ca86a"
+    },
+    {
+      "name": "sad",
+      "file": "main\\boards\\waveshare\\esp32-s3-touch-lcd-1.85c\\assets\\emoji\\sad.png",
+      "source": "portrait-firmware-b-20260907-123300-2048x2048.png",
+      "source_cell": 1,
+      "dimensions": [
+        360,
+        360
+      ],
+      "sha256": "299fa99b7938b5574e4cc4d4165256244e1b4675ac7e257ec5f5fe6deed231df"
+    },
+    {
+      "name": "shocked",
+      "file": "main\\boards\\waveshare\\esp32-s3-touch-lcd-1.85c\\assets\\emoji\\shocked.png",
+      "source": "portrait-firmware-b-20260907-123300-2048x2048.png",
+      "source_cell": 2,
+      "dimensions": [
+        360,
+        360
+      ],
+      "sha256": "b885392c8912649aa5b3c254e78690c8fee32265cfd84df377550a661511909b"
+    },
+    {
+      "name": "confused",
+      "file": "main\\boards\\waveshare\\esp32-s3-touch-lcd-1.85c\\assets\\emoji\\confused.png",
+      "source": "portrait-firmware-b-20260907-123300-2048x2048.png",
+      "source_cell": 3,
+      "dimensions": [
+        360,
+        360
+      ],
+      "sha256": "5ba774282a2603f14ebd848831f0a742a00b0de207467c4e6546186ba200c9c9"
+    },
+    {
+      "name": "cool",
+      "file": "main\\boards\\waveshare\\esp32-s3-touch-lcd-1.85c\\assets\\emoji\\cool.png",
+      "source": "portrait-firmware-b-20260907-123300-2048x2048.png",
+      "source_cell": 4,
+      "dimensions": [
+        360,
+        360
+      ],
+      "sha256": "eb635410bf434c1a68338d15effdd19692738b4dd341b459159c377e8b053ce7"
+    },
+    {
+      "name": "winking",
+      "file": "main\\boards\\waveshare\\esp32-s3-touch-lcd-1.85c\\assets\\emoji\\winking.png",
+      "source": "portrait-firmware-b-20260907-123300-2048x2048.png",
+      "source_cell": 5,
+      "dimensions": [
+        360,
+        360
+      ],
+      "sha256": "b4620c9507dcf3de8d1123aac78a5e2717f1da61cfca9b6482d55a4490bb82eb"
+    },
+    {
+      "name": "loving",
+      "file": "main\\boards\\waveshare\\esp32-s3-touch-lcd-1.85c\\assets\\emoji\\loving.png",
+      "source": "portrait-firmware-b-20260907-123300-2048x2048.png",
+      "source_cell": 6,
+      "dimensions": [
+        360,
+        360
+      ],
+      "sha256": "cddbe8aae97027eae0213d2f845e8abb680455d9c7552ff3c4cbb928d76eaf61"
+    },
+    {
+      "name": "kissy",
+      "file": "main\\boards\\waveshare\\esp32-s3-touch-lcd-1.85c\\assets\\emoji\\kissy.png",
+      "source": "portrait-firmware-b-20260907-123300-2048x2048.png",
+      "source_cell": 7,
+      "dimensions": [
+        360,
+        360
+      ],
+      "sha256": "effef1436ebd8c4c7d187099a13b13398e7621020e21f327ceff0e0f75b399ff"
+    },
+    {
+      "name": "relaxed",
+      "file": "main\\boards\\waveshare\\esp32-s3-touch-lcd-1.85c\\assets\\emoji\\relaxed.png",
+      "source": "portrait-firmware-b-20260907-123300-2048x2048.png",
+      "source_cell": 8,
+      "dimensions": [
+        360,
+        360
+      ],
+      "sha256": "e2b06886378fa688b2fb9febd95c352cd84f039c050daf18c1700aee57f98704"
+    },
+    {
+      "name": "funny",
+      "file": "main\\boards\\waveshare\\esp32-s3-touch-lcd-1.85c\\assets\\emoji\\funny.png",
+      "source": "portrait-firmware-c-20260907-123300-3072x1024.png",
+      "source_cell": 0,
+      "dimensions": [
+        360,
+        360
+      ],
+      "sha256": "aca7b9c3358869eacd9b479fc5623a436501a9cf6b3b380519a76f6f76f9989c"
+    },
+    {
+      "name": "silly",
+      "file": "main\\boards\\waveshare\\esp32-s3-touch-lcd-1.85c\\assets\\emoji\\silly.png",
+      "source": "portrait-firmware-c-20260907-123300-3072x1024.png",
+      "source_cell": 1,
+      "dimensions": [
+        360,
+        360
+      ],
+      "sha256": "9d0401856742b9beaa89df5b1b838f8991142dbfcec30b40f4c1eef737fb1dac"
+    },
+    {
+      "name": "delicious",
+      "file": "main\\boards\\waveshare\\esp32-s3-touch-lcd-1.85c\\assets\\emoji\\delicious.png",
+      "source": "portrait-firmware-c-20260907-123300-3072x1024.png",
+      "source_cell": 2,
+      "dimensions": [
+        360,
+        360
+      ],
+      "sha256": "bc8073df6bbc63e8cf2bfb24c0745859aebd6e49208dcf8f2a3f416fbaad4327"
+    }
+  ]
+}

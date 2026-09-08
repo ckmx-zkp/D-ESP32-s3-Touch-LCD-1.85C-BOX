@@ -1,0 +1,14 @@
+Use the supplied photograph as identity reference and the supplied nine-sticker illustration as style reference. Create a refined anime chibi big-head sticker sheet of the SAME adult man. Make his facial shape SLIGHTLY LONGER AND LESS ROUND than the illustrated reference: about 10 to 12 percent longer oval from brow to chin, subtly slimmer cheeks and a gently elongated chin. Redraw natural proportions; do not simply stretch the whole image. Keep his recognizable broad high forehead, receding very short black hair, thin silver rectangular glasses, clean-shaven face, and light gray Mandarin-collar shirt. Preserve his adult age and warm likeness. Consistent face design across every sticker. Polished clean hand-drawn anime outlines, soft cel shading, expressive eyes, tasteful cheek blush. Very large head with tiny shoulders and occasional small hands. No full body.
+
+Square 2048x2048 sheet, exactly 3 columns and 3 rows, nine equal square cells. Each sticker centered in its cell, identical scale, clean pure white background and wide white gutters at exact one-third boundaries, no grid lines. All artwork and accents at least 6 percent from cell edges, perfectly separable by exact grid cropping. Head dominates the cell. Intended for a round LCD: keep the entire hairline, chin, eyes and glasses in the central 80 percent, keep hands close to the face. No text, no lettering, no captions, no logos, no watermark, no checkerboard. Omit the photographic surroundings and animals.
+
+Exact expressions in row-major order:
+1 happy: a warm delighted smile, friendly eyes, small wave.
+2 laughing: eyes squeezed closed, open-mouth hearty laugh, hand next to cheek.
+3 surprised: wide eyes, rounded small open mouth, raised brows, little yellow surprise accents.
+4 angry: comical frown and puffed cheeks, tiny fists, small red anger mark.
+5 crying: visibly sobbing, tears streaming down both cheeks, trembling mouth.
+6 embarrassed: shy blushing smile, eyes looking slightly aside, hand behind head.
+7 thinking: contemplative eyes looking upward, fingers under chin, small thought circles without letters.
+8 confident: pleased confident grin, clear thumbs-up close beside face, small sparkles.
+9 sleepy: yawning, drooping eyelids, hand covering mouth, blue sleep bubble without letters.

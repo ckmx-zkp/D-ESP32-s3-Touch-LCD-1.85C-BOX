@@ -14,6 +14,14 @@ SPEC.loader.exec_module(BUILD)
 
 
 class BuildDefaultAssetsTest(unittest.TestCase):
+    def test_board_owned_emoji_directory(self):
+        directory = str(ROOT / "main" / "boards")
+        self.assertEqual(BUILD.get_emoji_collection_path(directory, "unused"), directory)
+
+    def test_missing_absolute_emoji_directory_fails(self):
+        with self.assertRaises(ValueError):
+            BUILD.get_emoji_collection_path(str(ROOT / "missing-portrait-collection"), "unused")
+
     def test_text_font_metadata_uses_bundle_charset_size_and_bpp(self):
         with tempfile.TemporaryDirectory() as directory:
             assets = Path(directory)

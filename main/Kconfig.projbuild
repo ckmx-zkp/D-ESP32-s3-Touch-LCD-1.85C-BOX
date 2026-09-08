@@ -834,6 +834,21 @@ choice DISPLAY_ESP32S3_TOUCH_LCD_1_85C
 endchoice
 
 
+config BOX_V2_PORTRAIT_EMOJI
+    bool "Use full-screen portrait emoji on BOX V2"
+    depends on BOARD_TYPE_WAVESHARE_ESP32_S3_TOUCH_LCD_1_85C && VERSION_2_0 && USE_DEFAULT_MESSAGE_STYLE
+    default n
+    help
+        Load the board-local 360x360 portrait collection and round-screen layout.
+
+config PRIVATE_NETEASE_MUSIC
+    bool "Enable private NetEase music MCP tools"
+    depends on BOARD_TYPE_WAVESHARE_ESP32_S3_TOUCH_LCD_1_85C && VERSION_2_0
+    default n
+    help
+        Register URL playback and stop tools for the BOX V2 music variant.
+        Music search and account credentials stay on the private MCP gateway.
+
 choice DISPLAY_STYLE
     prompt "Select display style"
     default USE_DEFAULT_MESSAGE_STYLE
