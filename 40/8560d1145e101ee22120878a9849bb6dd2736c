@@ -1,0 +1,19 @@
+赛博分身小智-MCP服务接入与使用说明.md
+  s_20742fc20a7f1d::t_e38f94b63b461b 17-44
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "408560d1145e101ee22120878a9849bb6dd2736c",
+  "prompts": {},
+  "sessions": {
+    "s_20742fc20a7f1d": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a080cf-adf6-7ae0-a959-ae3739aa2054",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "kunpeng2.zhang <kunpeng2.zhang@ly.com>"
+    }
+  }
+}
