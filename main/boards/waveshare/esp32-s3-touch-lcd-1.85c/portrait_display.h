@@ -5,6 +5,9 @@
 
 #include <cstring>
 
+extern const uint8_t box_upgrade_thinking_start[] asm("_binary_box_upgrade_thinking_start");
+extern const uint8_t box_upgrade_thinking_end[] asm("_binary_box_upgrade_thinking_end");
+
 class PortraitLcdDisplay : public SpiLcdDisplay {
 public:
     using SpiLcdDisplay::SpiLcdDisplay;
@@ -29,6 +32,20 @@ public:
         if (!IsSetupUICalled() || emotion == nullptr) {
             return;
         }
+        if (strcmp(emotion, "download") == 0 || strcmp(emotion, "cloud_download") == 0) {
+            DisplayLockGuard lock(this);
+            // Resources are not applied yet during boot-time assets updates. Keep this
+            // PNG in the application partition so it also survives assets unmapping.
+            if (gif_controller_) {
+                gif_controller_->Stop();
+                gif_controller_.reset();
+            }
+            lv_image_set_src(emoji_image_, upgrade_thinking_.image_dsc());
+            lv_obj_add_flag(emoji_label_, LV_OBJ_FLAG_HIDDEN);
+            lv_obj_remove_flag(emoji_image_, LV_OBJ_FLAG_HIDDEN);
+            ESP_LOGI("PortraitDisplay", "Built-in thinking background: %s", emotion);
+            return;
+        }
         // System-status symbols share the same portrait vocabulary as cloud emotions.
         const char* portrait = emotion;
         if (strcmp(emotion, "robot_2") == 0 || strcmp(emotion, "link") == 0) {
@@ -37,8 +54,6 @@ public:
             portrait = "confused";
         } else if (strcmp(emotion, "cancel") == 0) {
             portrait = "sad";
-        } else if (strcmp(emotion, "download") == 0 || strcmp(emotion, "cloud_download") == 0) {
-            portrait = "thinking";
         }
         auto collection = static_cast<LvglTheme*>(current_theme_)->emoji_collection();
         if (collection == nullptr) {
@@ -56,6 +71,10 @@ public:
     }
 
 private:
+    LvglRawImage upgrade_thinking_{
+        const_cast<uint8_t*>(box_upgrade_thinking_start),
+        static_cast<size_t>(box_upgrade_thinking_end - box_upgrade_thinking_start)};
+
     void ApplyPortraitLayout() {
         if (!IsSetupUICalled()) {
             return;

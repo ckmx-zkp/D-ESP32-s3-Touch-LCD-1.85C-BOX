@@ -1101,6 +1101,13 @@ idf_component_register(SRCS ${SOURCES}
                         ${MAIN_PRIV_REQUIRES_EXTRA}
                     )
 
+# The upgrade screen must work before assets are applied and while they are erased.
+if(CONFIG_BOX_V2_PORTRAIT_EMOJI)
+    target_add_binary_data(${COMPONENT_LIB}
+        "${CMAKE_CURRENT_SOURCE_DIR}/boards/waveshare/esp32-s3-touch-lcd-1.85c/assets/emoji/thinking.png"
+        BINARY RENAME_TO box_upgrade_thinking)
+endif()
+
 # Use target_compile_definitions to define the reported board identity
 # If BOARD_NAME is empty, use BOARD_TYPE
 if(NOT BOARD_NAME)
