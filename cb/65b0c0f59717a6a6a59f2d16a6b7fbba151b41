@@ -1,0 +1,74 @@
+main/ota.h
+  s_20742fc20a7f1d::t_87485fbc2efc4e 10-11,21,27-28,34-35,44,54-55,63-65,70
+deploy/ota-server/publish_release.py
+  s_20742fc20a7f1d::t_87485fbc2efc4e 1-76
+scripts/publish_ota.ps1
+  s_20742fc20a7f1d::t_fbb685e1493a9d 1-34
+main/Kconfig.projbuild
+  s_20742fc20a7f1d::t_87485fbc2efc4e 9-17,285-287,837,851,858
+deploy/ota-server/nginx-ota-ip.conf
+  s_20742fc20a7f1d::t_87485fbc2efc4e 1-30
+deploy/ota-server/xiaozhi-ota.env.example
+  s_20742fc20a7f1d::t_87485fbc2efc4e 1-5
+main/boards/laoyuanxiaozhi/config.json
+  s_20742fc20a7f1d::t_87485fbc2efc4e 1-11,13-20
+  s_20742fc20a7f1d::t_423fb6b1665288 12
+main/boards/laoyuanxiaozhi/laoyuanxiaozhi.cc
+  s_20742fc20a7f1d::t_87485fbc2efc4e 1-2
+deploy/ota-server/README.md
+  s_20742fc20a7f1d::t_18d711750a6d74 1-40,42-45
+  s_20742fc20a7f1d::t_365ba264332f76 41,46-51
+main/boards/laoyuanxiaozhi/README.md
+  s_20742fc20a7f1d::t_18d711750a6d74 1-2,8,10,12-16,20-22
+  s_20742fc20a7f1d::t_5dbf311bcedb2d 3-7,9,11,17-19,23-40
+deploy/ota-server/test_ota_server.py
+  s_20742fc20a7f1d::t_06061f6c48c8a0 1-104
+deploy/ota-server/ota-root-ca.pem
+  s_20742fc20a7f1d::t_87485fbc2efc4e 1-25
+main/application.cc
+  s_20742fc20a7f1d::t_87485fbc2efc4e 423-429,489-501,511-515
+main/boards/laoyuanxiaozhi/config.h
+  s_20742fc20a7f1d::t_87485fbc2efc4e 1-4
+scripts/build-laoyuanxiaozhi.cmd
+  s_20742fc20a7f1d::t_87485fbc2efc4e 1-8,11
+  s_20742fc20a7f1d::t_ed2ba16f6c3683 9-10,12
+main/CMakeLists.txt
+  s_20742fc20a7f1d::t_87485fbc2efc4e 394-401
+prompts/laoyuanxiaozhi-persona.md
+  s_20742fc20a7f1d::t_18d711750a6d74 2,4,6,8,10,12,14,16,22
+  s_20742fc20a7f1d::t_d87edefea2a3bd 1,3,5,7,9,11,13,15,17-21,23
+scripts/verify_private_ota.py
+  s_20742fc20a7f1d::t_fbb685e1493a9d 1-56
+deploy/ota-server/ota_server.py
+  s_20742fc20a7f1d::t_87485fbc2efc4e 1-182
+main/ota.cc
+  s_20742fc20a7f1d::t_87485fbc2efc4e 3-4,10-15,20-21,24,43,64-65,74,115-116,124,147,150-151,168,171-172,189,191-193,198,201,203-204,214-240,242,246,260,268-276,278-331,356-357,366-367,413-414,424-426,428-431,494,496-502,505,512-518,526,537-538,540-541,554,590,596-597
+deploy/ota-server/xiaozhi-ota.service
+  s_20742fc20a7f1d::t_87485fbc2efc4e 1-21
+docs/laoyuanxiaozhi-validation.md
+  s_874462846f29c0::t_85637b25d0d2af 1-18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "cb65b0c0f59717a6a6a59f2d16a6b7fbba151b41",
+  "prompts": {},
+  "sessions": {
+    "s_20742fc20a7f1d": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a080cf-adf6-7ae0-a959-ae3739aa2054",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "kunpeng2.zhang <kunpeng2.zhang@ly.com>"
+    },
+    "s_874462846f29c0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a080d0-4884-72a1-a402-d45d64e5e5f9",
+        "model": "unknown"
+      },
+      "human_author": "kunpeng2.zhang <kunpeng2.zhang@ly.com>"
+    }
+  }
+}
